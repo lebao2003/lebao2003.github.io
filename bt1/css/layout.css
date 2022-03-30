@@ -5,17 +5,18 @@
 }
 
 html {
-  background: black;
+  background-image: linear-gradient(to right,#cdd8dd, #c5916391,#108dc7,#8e44ad);
 }
 .main {
   font-family: Arial, Helvetica, sans-serif;
   width: 80%;
   margin: 0 auto;
-  background-color: rgb(236, 227, 227);
+  /* background-color: rgb(236, 227, 227); */
 }
 
 .header {
   height: 80px;
+  background-color: rgba(125, 141, 216, 0.3);
   /* background-color: aqua; */
   position: relative;
   font-size: 16px;
