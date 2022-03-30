@@ -72,7 +72,7 @@ html {
 }
 
 .content {
-  height: 500px;
+  height: 1500px;
 
 }
 
@@ -84,9 +84,28 @@ html {
   outline: none;
   background: cornflowerblue;
   padding: 5px;
-  
+  margin-left: 50%;
+  margin-bottom: 30px;
+  transform: translateX(-50%);
 }
 
 .content .keyword i {
   margin-left:0px;
+}
+
+.content .card {
+  width: 40%;
+  
+}
+
+.content .card1 {
+  width: 40%;
+  margin-left: 20px;
+  float: left;
+} 
+
+.content .card2 {
+  width: 40%;
+
+  float: right;
 }
