@@ -149,10 +149,9 @@ body {
   /* transition: transform 0.5s; */
 }
 
-.logo-matchday  img:hover {
+/* .logo-matchday  img:hover {
   /* transform: rotateY(45deg); */
 
-}
 
 .news {
   margin: 0 auto;
@@ -222,13 +221,38 @@ body {
 .item.n2 {
   margin-top: 20px;
   width: 22%;
-  height: 360px;
-}
-
-.item.n2.first {
   margin-right: 4%;
+  height: 360px;
+  position: relative;
 }
 
+.item.n2 .first-n2 {
+  height: 100%;
+}
+
+.item.n2.second {
+  height: 360px;
+  margin-right: 0;
+}
+.item.n2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.title-youtube {
+  position: absolute;
+  bottom: 10%;
+}
+
+.title-info {
+  position: absolute;
+  bottom: 0.2%;
+}
 
 /* about-us.html */
 .slider {
