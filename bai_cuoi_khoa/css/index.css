@@ -1,11 +1,21 @@
 @font-face {
-  font-family: SourceSansProLight 
+  font-family:SourceSansProLight; 
   src: url("../fonts/sourcesanspro/SourceSansPro-Light.otf");
 }
 
 @font-face {
-  font-family: MontserratBold;
+  font-family:MontserratBold;
   src: url("../fonts/Montserrat/montserrat-semibold.woff");
+}
+
+@font-face {
+  font-family:BebasneueBold;
+  src: url("../fonts/Bebas_Neue/bebasneue_bold-webfont.woff");
+}
+
+@font-face {
+  font-family:MontserratSemiBold;
+  src: url("../fonts/Montserrat/montserrat-semibold\ \(1\).woff");
 }
 * {
   margin: 0;
@@ -20,6 +30,12 @@ body {
 
 h3 {
   font-weight: 300;
+  font-family: 'BebasneueBold',Helvetica, sans-serif;
+  letter-spacing: .05em;
+}
+
+i:hover {
+  cursor: pointer;
 }
 
 .header{
@@ -53,6 +69,21 @@ h3 {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+
+.left-icons {
+  float: left;
+  line-height: 40px;
+  margin-left: 10%;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+
+
+
+.left-icons:hover {
+
 }
 
 .container {
@@ -89,6 +120,7 @@ h3 {
 
 .container li a:hover{
   border-bottom: 2px solid #fff;
+  box-shadow: 0px 1px rgba(0,0,0,.5);
 }
 
 .content{
@@ -162,12 +194,7 @@ h3 {
 
 .logo-matchday  img {
   margin-top: 50%;
-  /* transition: transform 0.5s; */
 }
-
-/* .logo-matchday  img:hover {
-  /* transform: rotateY(45deg); */
-
 
 .news {
   margin: 0 auto;
@@ -197,7 +224,7 @@ h3 {
   width: 48%;
   height: 360px;
   position: relative;
-  /* margin-right: 20px; */
+  border: 1px solid #f2f2f2;
 }
 
 .first.item.n1 {
@@ -220,7 +247,7 @@ h3 {
   height: 100%;
   background-size: cover;
   background-position: -10px 0;
-  transition: transform .1s ease;
+  transition:  .5s ease-in-out;
 }
 
 .item.n1 img {
@@ -232,7 +259,7 @@ h3 {
 
 .second-n1 {
   float: left;
-  width: 50%;
+  width: 52%;
   padding: 20px 0px 16px 0;
   position:relative;
   height: 100%;
@@ -248,16 +275,16 @@ h3 {
 
 .second-n1 .news-heading::after {
   content: "";
-  width: 61px;
+  width: 0px;
   position: absolute;
   top: -10px;
   border-top: 2px #c81617 solid;
-  transition:all linear 0.3s;
-  transform: scaleX(0);
+  transition:all ease-in-out .5s;
+
 }
 
 .item:hover .news-heading::after {
-  transform: scaleX(1);
+  width: 61px;
 }
 
 .second-n1 .news-p {
@@ -277,6 +304,8 @@ h3 {
 
 .item:hover .img-news {
   transform: scale(1.1);
+  transition-duration: 0.5s;
+
   /* transition: transform 4s cubic-bezier(0.19,1,.22,1); */
 
 }
@@ -292,11 +321,18 @@ h3 {
   height: 360px;
   position: relative;
   color:white;
+
+
+}
+
+.item.n2 img{
+  transition: .5s ease-in-out ;
+  
 }
 
 .item.n2 img:hover{
   transform: scale(1.1);
-  transition: transform 3.8s cubic-bezier(0.19,1,.22,1);
+  transition-duration: 0.5s;
 }
 
 .item.n2 .first-n2 {
@@ -332,6 +368,23 @@ h3 {
   left:4%;
   z-index: 20;
   font-weight: 400;
+  width: 100%;
+}
+
+.icon-share {
+  background-image: url(../img/icons-J5Vfiqzk9.png);
+  background-position: -966px 0;
+  height: 15px;
+  width: 13px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 2%;
+  right: 23px;
+  transform: scale(0.9);
+}
+.icon-share:hover {
+  transform: scale(1.2);
+  transition: all ease-out ;
 }
 
 .icon-youtube {
@@ -377,10 +430,12 @@ h3 {
 }
 
 .name-special {
+  font-family: 'BebasneueBold';
   position: absolute;
+  left: 10%;
   bottom: 0;
   padding: 0 20px 20px 20px;
-  color: white;
+  color: #f8f8f8;
   text-transform: uppercase;
   z-index: 100;
   font-size: 72px;
@@ -405,13 +460,15 @@ h3 {
   margin-bottom: 16px;
   font-size: 20px;
 }
-
+/* TEAM HTML--------------- */
 .content-picture {
   width: 80%;
   margin: 0 auto;
 }
 
 .content-picture .item-gallery {
+  background-image: url("../img/about-us-box.jpg");
+  background-size: cover;
   width: 48%;
   height: 333px;
   margin-left: 1%;
@@ -419,4 +476,151 @@ h3 {
   float: left;
   background-color: #1a1a1a;
   margin-bottom: 24px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gallery-name {
+  font-family:'BebasneueBold' ;
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  font-size: 32px;
+  color: #f2f2f2;
+  z-index: 20;
+
+}
+
+.gallery-name::before {
+  content: "";
+  border: 1px solid #c70101;
+  width: 61px;
+  position: absolute;
+  margin-top: -10px;
+}
+
+.fa-solid.fa-chevron-down {
+  margin-left: 15px;
+}
+
+.subnav {
+  width: 6%;
+  background: #1a1a1a;
+  position: absolute;
+  z-index: 1000000;
+  border-radius: 0 0 8px 8px ;
+  display: block;
+  display:none;
+}
+
+.left-icons{
+  font-family: SourceSansProLight;
+}
+
+.subnav li {
+  list-style-type: none;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  height: 39px;
+}
+
+.subnav a {
+  color: white;
+  text-decoration: none;
+  /* display: block; */
+  font-size: 16px;
+  padding: 9px 7px;
+}
+
+.left-icons:hover .subnav {
+  display:unset;
+  display:block;
+}
+
+.left-icons:hover .fa-solid.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.player {
+  width: 100%;
+}
+
+.player-box {
+  margin-top: 67px;
+  padding-top: 5%;
+  /* margin-bottom: 2px; */
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.name-box {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 10px;
+  font-family: MontserratSemiBold;
+  margin-left: 1%;
+  margin-right: 1%;
+
+}
+
+.player-card {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.show-player {
+  background-image: url("../img/player1-gk.jpg");
+  background-size: cover;
+  width: 23%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 250px;
+  float:left;
+  background-color: black;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.info-player {
+  padding:0 0 20px 16px;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  color: #ffffff;
+}
+
+.info-player .number-player {
+  position: relative;
+  font-family: MontserratSemiBold;
+  margin-bottom: 16px;
+}
+
+
+.info-player .number-player::after {
+  content: "";
+  border-bottom: 1px solid #c70101;
+  width: 24px;
+  bottom: -8px;
+  left: 0;
+  position: absolute;
+}
+
+.info-player .first-name-player{
+  position: relative;
+  font-family: BebasneueBold;
+  font-size: 32px;
+  height: auto;
+  float: left;
+  width: 100%;
+  line-height: 32px;
+
+}
+
+.info-player .last-name-player{
+  position: relative;
+  font-family: BebasneueBold;
+  height: auto;
+  font-size: 32px;
+  line-height: 32px;
 }
