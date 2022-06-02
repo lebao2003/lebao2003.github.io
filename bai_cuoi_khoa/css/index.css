@@ -1,5 +1,5 @@
 @font-face {
-  font-family:SourceSansProLight; 
+  font-family:"SourceSansProLight"; 
   src: url("../fonts/sourcesanspro/SourceSansPro-Light.otf");
 }
 
@@ -25,7 +25,7 @@
 
 body {
   width: 100%;
-  background-color: #f8f8f8;
+  background-color: #fff;
 }
 
 h3 {
@@ -55,7 +55,7 @@ i:hover {
 .first-header {
   height: 40px;
   background: #1a1a1a;
-  color: red;
+  color: white;
 }
 
 .first-header .social-icons {
@@ -98,13 +98,13 @@ i:hover {
   margin-right: 10%;
 }
 
-.container li {
+.container> .nav > li {
   list-style-type: none;
   float: left;
 
 }
 
-.container li a {
+.container > .nav > li > a {
   text-align: center;
   font-size: 14px;
   text-decoration: none;
@@ -118,19 +118,41 @@ i:hover {
 
 }
 
-.container li a:hover{
-  border-bottom: 2px solid #fff;
-  box-shadow: 0px 1px rgba(0,0,0,.5);
+.container > .nav >li> a:hover{
+  /* border-bottom: 2px solid #fff;
+  margin-bottom: 10px;
+  box-shadow: 0px 1px rgba(0,0,0,.5); */
 }
+
+/* .nav .table-choose {
+  background: black;
+  /* position: absolute; */
+  /* display: inline-block; */
+  /* list-style-type: none;
+  text-align: left;
+  text-transform: uppercase;
+} */
+
+.table-choose li {
+  margin-left: 20px;
+
+}
+
+.table-choose li a{
+  color: white;
+  text-decoration: none;
+  
+} */
 
 .content{
   color: red; 
 }
 
 .content .img-content {
-  padding-top: 50% ;
+  /* padding-top: 50% ; */
+  height: 368px;
   margin-top: 120px;
-  background: url('/bai_cuoi_khoa/img/slide.jpg') top center no-repeat;
+  background: url('../img/them1.webp') top center no-repeat;
   background-size: cover;
 }
 
@@ -173,8 +195,18 @@ i:hover {
   text-align: center;
 }
 
+.text-content .matchday {
+  font-family: BebasneueBold;
+}
+
 .text-content p{
   margin-top: 50%;
+  font-family:"SourceSansProLight";
+}
+
+.text-content .icon {
+  font-family: BebasneueBold;
+  font-size: 24px;
 }
 
 .logo-matchday.home{
@@ -546,11 +578,16 @@ i:hover {
 }
 
 .player-box {
-  margin-top: 67px;
-  padding-top: 5%;
+  /* margin-top: 67px; */
+  /* padding-top: 5%; */
   /* margin-bottom: 2px; */
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.player-box.first {
+  margin-top: 67px;
+  padding-top: 5%;
 }
 
 .name-box {
@@ -565,7 +602,7 @@ i:hover {
 .player-card {
   width: 100%;
   height: 200px;
-  margin-top: 20px;
+  margin-top: 2%;
 }
 
 .show-player {
@@ -574,12 +611,13 @@ i:hover {
   width: 23%;
   margin-left: 1%;
   margin-right: 1%;
-  height: 250px;
+  height: 280px;
   float:left;
   background-color: black;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 2%;
 }
 
 .info-player {
@@ -623,4 +661,328 @@ i:hover {
   height: auto;
   font-size: 32px;
   line-height: 32px;
+}
+
+.img-player {
+  width: 100%;
+  height: 100%;
+}
+.img-player img {
+  object-fit:cover;
+  width: 100%;
+  height: 100%;
+  object-position: top center ;
+}
+
+.img-player.special img {
+  object-position: 0 -29px;
+}
+
+/* TABLE ----------------------- */
+
+.c1-table {
+  margin-top: 120px;
+  width: 80%;
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+.ranking {
+  width: 60%;
+  float: left;
+}
+
+.ranking table {
+  width: 100%;
+}
+
+.name-table {
+  float: left;
+}
+
+.in-table {
+  width: 100%;
+}
+
+table {
+  border-collapse: 0;
+  border-spacing: 0;
+}
+
+.table-info.head {
+  background: #f2f2f2;
+}
+
+.table-info.show {
+  height: 45px;
+
+}
+
+.table-info.show th, td {
+  border-bottom: 1px solid rgba(204,183,183,.2);
+}
+
+.table-info .col-1 {
+  width: 3%;
+  height: 30px;
+  text-align: center;
+}
+
+.table-info .col-2 {
+  width: 30%;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.table-info .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 {
+  width: 6%;
+  text-align: center;
+}
+
+.table-info .col-9 {
+  width: 29%;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.table-info .col-2.col-22 .club-rank{
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  margin-left: 7px;
+}
+
+.club-rank img{
+  height: 24px;
+  width: 24px;
+  margin: 3px;
+}
+
+.club-name {
+  display: inline-block;
+  float: left;
+  line-height: 2;
+  margin-left: 15px;
+}
+
+.table-info.show .result-game{
+  line-height: 24px;
+  text-align: center;
+}
+
+.table-info.show .result-game li{
+  font-family: "SourceSansProLight";
+  float: left;
+  list-style-type: none;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin: 2px;
+  font-size: 12px;
+}
+
+.table-info.show .result-game .result.win {
+  background: #0f8723;
+  color: #fff;
+}
+
+.table-info.show .result-game .result.lose {
+  background: #c70101;
+  color: #fff;
+}
+
+.table-info.show .result-game .result.draw {
+  background: #707070;
+  color: #fff;
+}
+
+
+
+#test {
+  display: none;
+}
+#lichthidau {
+  display: block;
+}
+
+.menu-choose {
+  width: 100%;
+  height: 180px;
+  margin-top: 150px;
+  background-color: gray;
+}
+
+.menu-choose-left {
+  width: 50%;
+  height: 100%;
+  float:  left;
+  position: relative;
+
+
+}
+
+.menu-choose-right {
+  width: 50%;
+  height: 100%;
+  float:  left;
+  position: relative;
+}
+
+.button-menu-choose {
+  width: 400px;
+  height: 120px;
+  /* line-height: 60px; */
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.button-menu-choose::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: #c70101;
+  transition: width 1s;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.button-menu-choose:hover:before {
+  width: 100%;
+}
+
+.button-menu-choose h3 {
+  line-height: 120px;
+}
+
+.match-result {
+  float: left;
+  height: 360px;
+  width: 30%;
+  margin-left: 10%;
+  border: 1px solid #f2f2f2;
+  border-radius: 5%;
+  overflow: hidden  ;
+}
+
+.day-match {
+  text-align: center;
+  margin-top: 30%;
+  transform: translateY(-30%);
+}
+
+.day-match span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.team-left {
+  width: 38%;
+  float: left;
+  text-align: center;
+}
+
+.logo-left {
+  height: 96px;
+}
+
+.team img {
+  height: 90px;
+}
+
+.team-left span {
+  margin-top: 13px;
+  display: block;
+}
+
+.result-day {
+  display: block;
+  float: left;
+  width: 24%;
+  height: 96px;
+  text-align: center;
+  line-height: 96px;
+  font-family: 'BebasneueBold';
+  font-size: 48px;
+}
+
+.schedule-month {
+  height: 32px;
+}
+
+.schedule-heading {
+  height: 40px;
+  background: #f5f5f5;
+}
+
+.schedule-heading span {
+  display: inline-block;
+  line-height: 40px;
+}
+
+.schedule-club {
+  width: 45%;
+  float: left;
+  height: 100px;
+  padding-left: 25%;
+}
+
+.schedule-club span {
+  display: block;
+  float: left;
+  font-size: 20px;
+  line-height: 100px;
+}
+
+.schedule-club-logo {
+  width: 26px;
+  height: 26px;
+  margin-left: 20px;
+  margin-top: 36px;
+  float: left;
+}
+
+.schedule-club-logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.schedule-score {
+  background: #231f20;
+  color:white;
+  height:28px;
+  width: 5%;
+  float: left;
+  margin-top: 36px;
+  border-radius: 5px;
+  border: 1px solid black;
+  overflow: hidden;
+  margin-left: 2%;
+}
+
+.schedule-score span {
+  display: block;
+  text-align: center;
+  line-height: 28px;
+}
+
+.schedule-club.right{
+  padding-left: 0;
+  padding-right: 25%;
+  float: right;
+}
+
+.schedule-club-logo.right {
+  margin-right: 20px;
+  margin-left: 0;
+  float: right;
+}
+
+.schedule-club.right span{
+  float: right;
 }
